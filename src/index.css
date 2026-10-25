@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", Georgia, serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  --color-archive-navy: #0b111e;
+  --color-archive-dark: #121927;
+  --color-archive-surface: #182235;
+  --color-archive-parchment: #f6f1e6;
+  --color-archive-paper: #eae2d0;
+  --color-archive-red: #9e2a2b;
+  --color-archive-crimson: #be123c;
+  --color-archive-teal: #1d4e68;
+  --color-archive-steel: #38bdf8;
+}
+
+@layer base {
+  body {
+    background-color: #0b111e;
+    color: #f6f1e6;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Subtle archival grid pattern */
+.bg-archive-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Declassified Stamp effect */
+.stamp-classified {
+  border: 2px solid #be123c;
+  color: #be123c;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  display: inline-block;
+  transform: rotate(-3deg);
+  box-shadow: inset 0 0 0 1px rgba(190, 18, 60, 0.3);
+}
+
+.stamp-declassified {
+  border: 2px solid #059669;
+  color: #059669;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  display: inline-block;
+  transform: rotate(2deg);
+  box-shadow: inset 0 0 0 1px rgba(5, 150, 105, 0.3);
+}
